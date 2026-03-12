@@ -440,9 +440,50 @@ section h2 {
   color: var(--color-text);
 }
 
+/* ---------- Openingstijden ---------- */
+.openingstijden {
+  background: var(--color-bg);
+}
+
+.openingstijden-table-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.openingstijden-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.openingstijden-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.openingstijden-table tr:last-child td {
+  border-bottom: none;
+}
+
+.openingstijden-table td:first-child {
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.openingstijden-table td:last-child {
+  text-align: right;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
 /* ---------- Contact ---------- */
 .contact {
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
 }
 
 .contact-wrapper {
