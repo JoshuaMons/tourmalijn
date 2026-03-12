@@ -11,7 +11,6 @@
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu a');
-  const yearEl = document.getElementById('year');
 
   // ---------- Sticky navbar background on scroll ----------
   function updateNavbar() {
@@ -67,8 +66,4 @@
     });
   });
 
-  // ---------- Footer year ----------
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
 })();
