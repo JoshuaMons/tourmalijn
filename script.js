@@ -66,4 +66,33 @@
     });
   });
 
+  // ---------- Reviews: dynamic load + horizontal scroll ----------
+  const reviewsData = [
+    { text: 'Vriendelijk personeel. Veel keuze, goede wietjes. Heerlijk met het vrouwtje in de tuin geblowd.', author: 'Kapitein Kaas', rating: 5 },
+    { text: 'Very nice strains over here! Actual lab tested results on the Dutch grown Cali jars. Big menu and very friendly people.', author: 'unholyterpz', rating: 4 },
+    { text: 'Beste shop van Tilburg, altijd goede kwaliteit van mochi tot gorilla glue.', author: 'Spookyblaz', rating: 5 },
+    { text: 'Gummie bun voor €10 gehaald. Super wietje.. schoon en lekkere terpenen. Gassy earthy en zoet. En dat allemaal voor een tientje!', author: 'rapmexx', rating: 5 },
+    { text: 'Top shelf 3.5gr Potjes zijn zeker een aanrader. Mijn favoriet is de sherblate... Maar de Gummie Bun zou er ook zo in kunnen zitten.', author: 'rapmexx', rating: 5 },
+    { text: 'Beste shop van Tilburg.', author: 'monythejohl', rating: 5 },
+    { text: '1 van de beste in tilburg', author: 'Confidential', rating: 4 },
+    { text: 'Dure shop, wisselt vaak van mooie soorten en voor zowel de indica als de sativa stoners een plek waar je regelmatig ff binnen moet stappen! Deskundig personeel.', author: 'cannaseur', rating: 4 }
+  ];
+
+  function starString(rating) {
+    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+  }
+
+  const reviewsTrack = document.getElementById('reviewsTrack');
+  if (reviewsTrack) {
+    reviewsData.forEach(function (r) {
+      const block = document.createElement('blockquote');
+      block.className = 'review-card';
+      block.innerHTML =
+        '<div class="review-stars">' + starString(r.rating) + '</div>' +
+        '<p>&ldquo;' + r.text + '&rdquo;</p>' +
+        '<footer>— <cite>' + r.author + '</cite>, ' + r.rating + '/5</footer>';
+      reviewsTrack.appendChild(block);
+    });
+  }
+
 })();
