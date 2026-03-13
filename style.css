@@ -342,22 +342,108 @@ section h2 {
   font-size: 0.95rem;
 }
 
-/* ---------- Menu section ---------- */
+/* ---------- Menu section (pricelist) ---------- */
 .menu-section {
   background: var(--color-bg);
 }
 
-.menu-image-wrapper {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  max-width: 1000px;
-  margin: 0 auto;
+.menu-category {
+  margin-bottom: 2.5rem;
 }
 
-.menu-image-wrapper img {
+.menu-category:last-child {
+  margin-bottom: 0;
+}
+
+.menu-category h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.menu-category h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 1rem 0 0.5rem;
+  text-align: left;
+}
+
+.menu-category h4:first-of-type {
+  margin-top: 0;
+}
+
+.menu-subtitle {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.menu-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  margin-bottom: 0.5rem;
+}
+
+.menu-table {
   width: 100%;
-  height: auto;
+  min-width: 320px;
+  border-collapse: collapse;
+}
+
+.menu-table th,
+.menu-table td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.menu-table thead th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  background: var(--color-bg-alt);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.menu-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.menu-table td:first-child {
+  font-weight: 500;
+}
+
+.menu-table td:not(:first-child) {
+  text-align: right;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
 }
 
 /* ---------- About ---------- */
