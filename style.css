@@ -364,9 +364,104 @@ section h2 {
   color: var(--color-accent);
 }
 
+/* ---------- Info section (Beleid, Hasj, Wiet) ---------- */
+.info-section {
+  background: var(--color-bg-alt);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.info-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ---------- Nieuws ---------- */
+.nieuws-section {
+  background: var(--color-bg);
+}
+
+.nieuws-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.nieuws-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nieuws-list li:last-child {
+  border-bottom: none;
+}
+
+.nieuws-list a {
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.nieuws-list a:hover {
+  color: var(--color-primary);
+}
+
+/* ---------- Shop section ---------- */
+.shop-section {
+  background: var(--color-bg-alt);
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.shop-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.shop-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.4rem;
+}
+
+.shop-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 /* ---------- Services ---------- */
 .services {
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
 }
 
 .services-grid {
@@ -805,6 +900,56 @@ section h2 {
 
 .map-wrapper iframe {
   display: block;
+}
+
+/* ---------- Footer (Colofon, Gebruik, Tips, Contact) ---------- */
+.site-footer {
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding: 2.5rem 0 1.5rem;
+  margin-top: 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-block h3 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.4rem;
+}
+
+.footer-block p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-block a {
+  color: var(--color-text);
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto 1rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0;
 }
 
 /* ---------- Responsive ---------- */
