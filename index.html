@@ -227,31 +227,44 @@
 
   </main>
 
-  <!-- ========== FOOTER (Colofon, Gebruik, Tips, Contact) ========== -->
-  <footer class="site-footer">
+  <!-- ========== FOOTER (compact + popup) ========== -->
+  <footer class="site-footer site-footer-compact">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-block">
-          <h3>Colofon</h3>
-          <p>Website Coffeeshop Toermalijn, Tilburg. Alleen informatie; geen reclame voor drugs of de zaak. Conform gedoogbeleid.</p>
-        </div>
-        <div class="footer-block">
-          <h3>Gebruik</h3>
-          <p>Deze site is bedoeld voor informatie over openingstijden, adres, beleid en nieuws. Geen online verkoop. 18+.</p>
-        </div>
-        <div class="footer-block">
-          <h3>Tips</h3>
-          <p>Kom langs met geldig ID. Houd je aan de huisregels. Voor actueel aanbod en prijzen: in de zaak.</p>
-        </div>
-        <div class="footer-block">
-          <h3>Contact</h3>
-          <p><a href="tel:0135357536">013 535 7536</a> · <a href="mailto:toermail@ziggo.nl">toermail@ziggo.nl</a><br>Besterdring 187, 5014 HK Tilburg</p>
-        </div>
-      </div>
-      <p class="footer-disclaimer">Purely informational website. No advertising of drugs or the coffeeshop intended. Sales only in-person at the premises, 18+ with valid ID. No delivery or online orders.</p>
       <p class="footer-copy">&copy; <span id="footerYear"></span> Toermalijn, Tilburg</p>
+      <button type="button" class="footer-info-btn" id="footerInfoBtn" aria-haspopup="dialog" aria-expanded="false">Colofon, Gebruik, Tips & Contact</button>
     </div>
   </footer>
+
+  <!-- Footer info popup -->
+  <div class="footer-popup-overlay" id="footerPopup" role="dialog" aria-modal="true" aria-labelledby="footerPopupTitle" aria-hidden="true">
+    <div class="footer-popup-box">
+      <div class="footer-popup-header">
+        <h2 class="footer-popup-title" id="footerPopupTitle">Info & Contact</h2>
+        <button type="button" class="footer-popup-close" id="footerPopupClose" aria-label="Sluiten">&times;</button>
+      </div>
+      <div class="footer-popup-body">
+        <div class="footer-popup-grid">
+          <div class="footer-block">
+            <h3>Colofon</h3>
+            <p>Website Coffeeshop Toermalijn, Tilburg. Alleen informatie; geen reclame voor drugs of de zaak. Conform gedoogbeleid.</p>
+          </div>
+          <div class="footer-block">
+            <h3>Gebruik</h3>
+            <p>Deze site is bedoeld voor informatie over openingstijden, adres, beleid en nieuws. Geen online verkoop. 18+.</p>
+          </div>
+          <div class="footer-block">
+            <h3>Tips</h3>
+            <p>Kom langs met geldig ID. Houd je aan de huisregels. Voor actueel aanbod en prijzen: in de zaak.</p>
+          </div>
+          <div class="footer-block">
+            <h3>Contact</h3>
+            <p><a href="tel:0135357536">013 535 7536</a> · <a href="mailto:toermail@ziggo.nl">toermail@ziggo.nl</a><br>Besterdring 187, 5014 HK Tilburg</p>
+          </div>
+        </div>
+        <p class="footer-disclaimer">Purely informational website. No advertising of drugs or the coffeeshop intended. Sales only in-person at the premises, 18+ with valid ID. No delivery or online orders.</p>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
