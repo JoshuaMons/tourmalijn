@@ -1,10 +1,45 @@
 /**
  * Coffeeshop Toermalijn – Tilburg
- * Navbar, mobile menu, smooth scroll, footer year
+ * 18+ age gate, navbar, mobile menu, smooth scroll, footer year
  */
 
 (function () {
   'use strict';
+
+  const AGE_GATE_KEY = 'toermalijn-age-verified';
+
+  // ---------- 18+ Age gate (on entry) ----------
+  const ageGate = document.getElementById('ageGate');
+  const ageGateYes = document.getElementById('ageGateYes');
+  const ageGateNo = document.getElementById('ageGateNo');
+
+  function hideAgeGate() {
+    if (!ageGate) return;
+    try {
+      sessionStorage.setItem(AGE_GATE_KEY, '1');
+    } catch (e) {}
+    ageGate.classList.add('age-gate-hidden');
+    document.body.classList.remove('age-gate-active');
+  }
+
+  function redirectToGoogle() {
+    window.location.href = 'https://www.google.com';
+  }
+
+  if (ageGate) {
+    if (sessionStorage.getItem(AGE_GATE_KEY) === '1') {
+      hideAgeGate();
+    } else {
+      document.body.classList.add('age-gate-active');
+    }
+
+    if (ageGateYes) {
+      ageGateYes.addEventListener('click', hideAgeGate);
+    }
+    if (ageGateNo) {
+      ageGateNo.addEventListener('click', redirectToGoogle);
+    }
+  }
 
   // ---------- DOM elements ----------
   const navbar = document.getElementById('navbar');

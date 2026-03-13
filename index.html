@@ -29,6 +29,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- ========== 18+ Age gate (on entry) ========== -->
+  <div class="age-gate-overlay" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageGateTitle" aria-describedby="ageGateDesc">
+    <div class="age-gate-box">
+      <h2 class="age-gate-title" id="ageGateTitle">18+</h2>
+      <p class="age-gate-text" id="ageGateDesc">Deze website is alleen toegankelijk voor bezoekers van 18 jaar en ouder. Ben je 18 jaar of ouder?</p>
+      <div class="age-gate-buttons">
+        <button type="button" class="btn btn-primary age-gate-yes" id="ageGateYes">Ja</button>
+        <button type="button" class="btn btn-secondary age-gate-no" id="ageGateNo">Nee</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== NAVBAR ========== -->
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
